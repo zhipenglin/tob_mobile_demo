@@ -1,0 +1,64 @@
+.screen{
+  height: 100vh;
+  overflow: hidden;
+  text-align: center;
+  background: #f7f7f7;
+}
+
+@keyframes up {
+  0%,50%,100%{
+    transform: translateY(0);
+  }
+  25%{
+    transform: translateY(10px);
+  }
+  75%{
+    transform: translateY(-10px);
+  }
+}
+
+.page{
+  height:100vh;
+  position: relative;
+  &:after{
+    content:'';
+    display: block;
+    width: 52px;
+    height: 20px;
+    background: url('./up.svg') 100% /100%;
+    position: absolute;
+    bottom: 40px;
+    left: calc(50% - 26px);
+    animation: up 2s linear infinite;
+  }
+  &:first-child{
+    &:after{
+      background-image: url('./up-white.svg');
+    }
+  }
+  &:last-child{
+    &:after{
+      content:normal;
+    }
+  }
+}
+
+.layer{
+  position: absolute;
+  left: 0;
+  top:0;
+  background: #fff;
+  .close{
+    position: absolute;
+    right: 30px;
+    top:30px;
+    padding: 10px;
+    &:after{
+      content:'';
+      display: block;
+      width: 32px;
+      height: 32px;
+      background: url('./close.svg') 100% / 100%;
+    }
+  }
+}

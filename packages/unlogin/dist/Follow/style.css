@@ -1,0 +1,22 @@
+.page-follow .title {
+  font-size: 46px;
+  color: #333333;
+  position: absolute;
+  width: 100%;
+  font-weight: bold;
+  top: 13vh;
+  left: 0; }
+
+.page-follow .qr-code {
+  position: absolute;
+  top: 23vh;
+  width: 550px;
+  left: 50%;
+  transform: translateX(-50%); }
+
+.page-follow .foot {
+  font-size: 28px;
+  color: #999999;
+  top: 74vh;
+  width: 100%;
+  position: absolute; }

@@ -1,0 +1,27 @@
+{
+  "name": "unlogin-page",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "https://zhipenglin.github.io/tob_mobile_demo",
+  "dependencies": {
+    "gh-pages": "^1.2.0",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-scripts": "1.1.4"
+  },
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "amfe-flexible": "^2.2.1",
+    "classnames": "^2.2.6",
+    "fastclick": "^1.0.6",
+    "px2rem-loader": "^0.1.9",
+    "react-app-rewired": "^1.5.2"
+  }
+}

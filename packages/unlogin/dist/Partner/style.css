@@ -1,0 +1,23 @@
+.page-partner .title {
+  font-size: 46px;
+  color: #333333;
+  width: 100%;
+  position: absolute;
+  top: 10vh;
+  font-weight: bold; }
+
+.page-partner .item {
+  position: absolute;
+  top: 21vh;
+  width: 100%;
+  overflow: hidden;
+  left: 0;
+  line-height: 0; }
+
+.page-partner .logo {
+  width: 280px;
+  height: 100px;
+  padding: 25px 15px; }
+
+.page-partner .swipe-pointer {
+  top: 77vh; }

@@ -1,0 +1,32 @@
+.page-honor .title {
+  font-size: 46px;
+  color: #333333;
+  width: 100%;
+  position: absolute;
+  top: 10vh;
+  font-weight: bold; }
+
+.page-honor .honor-item {
+  width: 100vw;
+  overflow: hidden; }
+  .page-honor .honor-item .top {
+    position: absolute;
+    font-size: 28px;
+    color: #333333;
+    line-height: 46px;
+    top: 20vh;
+    width: 100%; }
+  .page-honor .honor-item .img {
+    width: 590px;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 8px;
+    position: absolute;
+    top: 33vh;
+    left: 50%;
+    transform: translateX(-50%); }
+    .page-honor .honor-item .img img {
+      width: 100%; }
+
+.page-honor .swipe-pointer {
+  top: 81vh; }
