@@ -1,0 +1,44 @@
+.page-introduce{
+  .top{
+    text-align: left;
+    position: absolute;
+    top:7vh;
+    left: 60px;
+  }
+  .title{
+    font-size: 56px;
+    color: #333333;
+  }
+  .desc{
+    font-size: 32px;
+    color: #999999;
+    margin-top: 6px;
+  }
+  .info{
+    font-size: 28px;
+    color: #333333;
+    position: absolute;
+    top:21vh;
+    left: 60px;
+    text-align: left;
+    line-height: 2;
+  }
+  .item{
+    &:before{
+      content:'';
+      display: inline-block;
+      vertical-align: center;
+      width: 12px;
+      height: 12px;
+      background: url('./point.png') 100% / 100%;
+      margin-right: 16px;
+      transform: translateY(-4px);
+    }
+  }
+  .animation{
+    position: absolute;
+    left: 50%;
+    top:34vh;
+    transform: translateX(-50%);
+  }
+}

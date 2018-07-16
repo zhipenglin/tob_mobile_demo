@@ -1,0 +1,35 @@
+.swipe {
+  overflow: hidden;
+  height: 100vh;
+}
+
+.swipe .swipe-inner {
+  display: flex;
+}
+
+.swipe .swipe-item {
+  flex: 1;
+  float: left;
+  position: relative;
+}
+
+.swipe .swipe-pointer {
+  position: absolute;
+  top: 88vh;
+  left: 50%;
+  transform: translateX(-50%);
+  line-height: 0;
+}
+
+.swipe .swipe-pointer-item {
+  width: 0.213333rem;
+  height: 0.213333rem;
+  border-radius: 0.106667rem;
+  background: #DDDDDD;
+  display: inline-block;
+  margin: 0 0.106667rem;
+}
+
+.swipe .swipe-pointer-item.active {
+  background: #FF8833;
+}

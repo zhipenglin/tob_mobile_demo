@@ -1,0 +1,56 @@
+.page-home{
+  background: -webkit-linear-gradient(left top,#ff6e00,#ff3c00);
+  .logo{
+    position: absolute;
+    top:40px;
+    left: 40px;
+    &:after{
+      content:'';
+      display: block;
+      background: url('./logo.svg') 100% / 100%;
+      width: 134px;
+      height: 44px;
+    }
+  }
+  .animation{
+    position: absolute;
+    top:10vh;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .slogan{
+    position: absolute;
+    top:62vh;
+    left: 50%;
+    transform: translateX(-50%);
+    &:after{
+      content:'';
+      display: block;
+      background: url('./slogan.svg') 100% / 100%;
+      width: 690px;
+      height: 70px;
+    }
+  }
+  .bottom{
+    position: absolute;
+    top:74vh;
+    left: 0;
+    width: 100%;
+  }
+  .button{
+    width: 68%;
+    height: 80px;
+    margin: 3vh auto 2vh;
+    display: block;
+    background: #fff;
+    border: none;
+    font-size: 32px;
+    color: #FD6200;
+    border-radius: 8px;
+    font-weight: bold;
+  }
+  .desc{
+    font-size: 28px;
+    color: #FFE7DC;
+  }
+}

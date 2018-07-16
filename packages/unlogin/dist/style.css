@@ -1,0 +1,67 @@
+.screen {
+  height: 100vh;
+  overflow: hidden;
+  text-align: center;
+  background: #f7f7f7;
+}
+
+@keyframes up {
+  0%, 50%, 100% {
+    transform: translateY(0);
+  }
+
+  25% {
+    transform: translateY(0.133333rem);
+  }
+
+  75% {
+    transform: translateY(-0.133333rem);
+  }
+}
+
+.page {
+  height: 100vh;
+  position: relative;
+}
+
+.page:after {
+  content: '';
+  display: block;
+  width: 0.693333rem;
+  height: 0.266667rem;
+  background: url("./up.svg") 100%/100%;
+  position: absolute;
+  bottom: 0.533333rem;
+  left: calc(50% - 0.346667rem);
+  animation: up 2s linear infinite;
+}
+
+.page:first-child:after {
+  background-image: url("./up-white.svg");
+}
+
+.page:last-child:after {
+  content: normal;
+}
+
+.layer {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #fff;
+}
+
+.layer .close {
+  position: absolute;
+  right: 0.4rem;
+  top: 0.4rem;
+  padding: 0.133333rem;
+}
+
+.layer .close:after {
+  content: '';
+  display: block;
+  width: 0.426667rem;
+  height: 0.426667rem;
+  background: url("./close.svg") 100%/100%;
+}

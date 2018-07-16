@@ -1,0 +1,45 @@
+.page-introduce .top {
+  text-align: left;
+  position: absolute;
+  top: 7vh;
+  left: 0.8rem;
+}
+
+.page-introduce .title {
+  font-size: 0.746667rem;
+  color: #333333;
+}
+
+.page-introduce .desc {
+  font-size: 0.426667rem;
+  color: #999999;
+  margin-top: 0.08rem;
+}
+
+.page-introduce .info {
+  font-size: 0.373333rem;
+  color: #333333;
+  position: absolute;
+  top: 21vh;
+  left: 0.8rem;
+  text-align: left;
+  line-height: 2;
+}
+
+.page-introduce .item:before {
+  content: '';
+  display: inline-block;
+  vertical-align: center;
+  width: 0.16rem;
+  height: 0.16rem;
+  background: url("./point.png") 100%/100%;
+  margin-right: 0.213333rem;
+  transform: translateY(-0.053333rem);
+}
+
+.page-introduce .animation {
+  position: absolute;
+  left: 50%;
+  top: 34vh;
+  transform: translateX(-50%);
+}
