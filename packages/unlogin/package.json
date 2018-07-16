@@ -1,15 +1,21 @@
 {
   "name": "@tob-support/unlogin",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "tob未登录引导页",
   "target": "client",
   "main": "dist/index.js",
   "scripts": {
+    "px2rem": "node scripts/px2rem",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "admin",
   "license": "ISC",
   "dependencies": {
     "raf": "^3.4.0"
+  },
+  "devDependencies": {
+    "fs-extra": "^6.0.1",
+    "glob": "^7.1.2",
+    "px2rem": "^0.5.0"
   }
 }
