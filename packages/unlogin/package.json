@@ -1,6 +1,6 @@
 {
   "name": "@tob-support/unlogin",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "tob未登录引导页",
   "target": "client",
   "main": "dist/index.js",
