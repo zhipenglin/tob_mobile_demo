@@ -1,64 +1,74 @@
-.screen{
-  height: 100vh;
-  overflow: hidden;
-  text-align: center;
-  background: #f7f7f7;
-}
+.unlogin{
+  &.screen{
+    height: 100vh;
+    overflow: hidden;
+    text-align: center;
+    background: #f7f7f7;
+    overflow: hidden;
+  }
 
-@keyframes up {
-  0%,50%,100%{
-    transform: translateY(0);
-  }
-  25%{
-    transform: translateY(10px);
-  }
-  75%{
-    transform: translateY(-10px);
-  }
-}
-
-.page{
-  height:100vh;
-  position: relative;
-  &:after{
-    content:'';
-    display: block;
-    width: 52px;
-    height: 20px;
-    background: url('./up.svg') 100% /100%;
-    position: absolute;
-    bottom: 40px;
-    left: calc(50% - 26px);
-    animation: up 2s linear infinite;
-  }
-  &:first-child{
-    &:after{
-      background-image: url('./up-white.svg');
+  @keyframes unlogin-up {
+    0%,50%,100%{
+      transform: translateY(0);
+    }
+    25%{
+      transform: translateY(5px);
+    }
+    75%{
+      transform: translateY(-5px);
     }
   }
-  &:last-child{
-    &:after{
-      content:normal;
-    }
-  }
-}
 
-.layer{
-  position: absolute;
-  left: 0;
-  top:0;
-  background: #fff;
-  .close{
-    position: absolute;
-    right: 30px;
-    top:30px;
-    padding: 10px;
+  .page-inner{
+    height: 100%;
+  }
+
+  .page{
+    height:100%;
+    position: relative;
+    overflow: hidden;
     &:after{
       content:'';
       display: block;
-      width: 32px;
-      height: 32px;
-      background: url('./close.svg') 100% / 100%;
+      width: 52px;
+      height: 20px;
+      background: url('./up.svg') 100% /100%;
+      position: absolute;
+      bottom: 4%;
+      left: calc(50% - 26px);
+      animation: unlogin-up 2s linear infinite;
+    }
+    &:first-child{
+      &:after{
+        background-image: url('./up-white.svg');
+      }
+    }
+    &:last-child{
+      &:after{
+        content:normal;
+      }
+    }
+  }
+
+  &.layer{
+    position: absolute;
+    left: 0;
+    top:0;
+    background: #fff;
+    width: 100%;
+    height: 100%;
+    .close{
+      position: absolute;
+      right: 30px;
+      top:30px;
+      padding: 10px;
+      &:after{
+        content:'';
+        display: block;
+        width: 32px;
+        height: 32px;
+        background: url('./close.svg') 100% / 100%;
+      }
     }
   }
 }

@@ -92,7 +92,7 @@ var _class = function (_PureComponent) {
                     _react2.default.createElement(
                         'button',
                         { className: 'button', onClick: this.handlerClick },
-                        '\u7533\u8BF7\u4F7F\u7528'
+                        '\u7533\u8BF7\u8BD5\u7528'
                     ),
                     _react2.default.createElement(
                         'div',

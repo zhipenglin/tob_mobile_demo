@@ -1,15 +1,15 @@
-.page-partner{
+.unlogin .page-partner{
   .title{
     font-size: 46px;
     color: #333333;
     width: 100%;
     position: absolute;
-    top:10vh;
+    top:10%;
     font-weight: bold;
   }
   .item{
     position: absolute;
-    top:21vh;
+    top:21%;
     width: 100%;
     overflow: hidden;
     left: 0;
@@ -18,9 +18,19 @@
   .logo{
     width: 280px;
     height: 100px;
-    padding: 25px 15px;
+    margin: 25px 15px;
+    box-sizing: content-box;
+    display: inline-block;
+    overflow: hidden;
+    background: #FFFFFF;
+    border: 1PX solid #EEEEEE;
+    border-radius: 4px;
+    vertical-align: top;
+    img{
+      width: 100%;
+    }
   }
   .swipe-pointer{
-    top:77vh;
+    top:82%;
   }
 }

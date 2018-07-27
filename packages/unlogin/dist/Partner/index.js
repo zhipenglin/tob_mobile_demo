@@ -35,7 +35,11 @@ exports.default = function () {
                     'div',
                     { className: 'item', key: index },
                     item.map(function (logo, i) {
-                        return _react2.default.createElement('img', { className: 'logo', key: index + '-' + i, src: logo, alt: 'logo' });
+                        return _react2.default.createElement(
+                            'div',
+                            { className: 'logo', key: index + '-' + i },
+                            _react2.default.createElement('img', { src: logo, alt: 'logo' })
+                        );
                     })
                 );
             })

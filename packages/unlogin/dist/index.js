@@ -102,7 +102,7 @@ var _class = function (_PureComponent) {
 
             return _react2.default.createElement(
                 _Page2.default,
-                { className: 'screen', index: this.state.index, onChange: this.handlerChange },
+                { className: 'unlogin screen', index: this.state.index, onChange: this.handlerChange },
                 _react2.default.createElement(_Home2.default, { hypeHeader: hypeHeader, running: index === 0, ApplyPage: ApplyPage }),
                 _react2.default.createElement(_Introduce2.default, { hypeHeader: hypeHeader, running: index === 1 }),
                 _react2.default.createElement(_Company2.default, null),

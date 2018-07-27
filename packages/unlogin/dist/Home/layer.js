@@ -43,7 +43,7 @@ exports.default = function (WrappedComponent) {
             };
 
             this._layer = document.createElement('div');
-            this._layer.className = 'layer';
+            this._layer.className = 'layer unlogin';
             document.body.appendChild(this._layer);
             this.props = (0, _assign2.default)({}, props);
             this.reactLayer = this._render();

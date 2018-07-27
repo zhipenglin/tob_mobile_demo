@@ -1,27 +1,38 @@
-.page-partner .title {
+.unlogin .page-partner .title {
   font-size: 0.613333rem;
   color: #333333;
   width: 100%;
   position: absolute;
-  top: 10vh;
+  top: 10%;
   font-weight: bold;
 }
 
-.page-partner .item {
+.unlogin .page-partner .item {
   position: absolute;
-  top: 21vh;
+  top: 21%;
   width: 100%;
   overflow: hidden;
   left: 0;
   line-height: 0;
 }
 
-.page-partner .logo {
+.unlogin .page-partner .logo {
   width: 3.733333rem;
   height: 1.333333rem;
-  padding: 0.333333rem 0.2rem;
+  margin: 0.333333rem 0.2rem;
+  box-sizing: content-box;
+  display: inline-block;
+  overflow: hidden;
+  background: #FFFFFF;
+  border: 1PX solid #EEEEEE;
+  border-radius: 0.053333rem;
+  vertical-align: top;
 }
 
-.page-partner .swipe-pointer {
-  top: 77vh;
+.unlogin .page-partner .logo img {
+  width: 100%;
+}
+
+.unlogin .page-partner .swipe-pointer {
+  top: 82%;
 }

@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://zhipenglin.github.io/tob_mobile_demo",
   "dependencies": {
+    "@tob-support/unlogin": "^1.0.6",
     "gh-pages": "^1.2.0",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
@@ -18,7 +19,6 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
-    "@tob-support/unlogin": "^1.0.1",
     "amfe-flexible": "^2.2.1",
     "classnames": "^2.2.6",
     "fastclick": "^1.0.6",

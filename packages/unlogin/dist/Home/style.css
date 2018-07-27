@@ -1,14 +1,14 @@
-.page-home {
+.unlogin .page-home {
   background: -webkit-linear-gradient(left top, #ff6e00, #ff3c00);
 }
 
-.page-home .logo {
+.unlogin .page-home .logo {
   position: absolute;
   top: 0.533333rem;
   left: 0.533333rem;
 }
 
-.page-home .logo:after {
+.unlogin .page-home .logo:after {
   content: '';
   display: block;
   background: url("./logo.svg") 100%/100%;
@@ -16,21 +16,27 @@
   height: 0.586667rem;
 }
 
-.page-home .animation {
+.unlogin .page-home .animation {
   position: absolute;
-  top: 10vh;
+  top: 10%;
   left: 50%;
   transform: translateX(-50%);
 }
 
-.page-home .slogan {
+@media screen and (max-width: 350px) {
+  .unlogin .page-home .animation {
+    top: 0%;
+  }
+}
+
+.unlogin .page-home .slogan {
   position: absolute;
-  top: 62vh;
+  top: 62%;
   left: 50%;
   transform: translateX(-50%);
 }
 
-.page-home .slogan:after {
+.unlogin .page-home .slogan:after {
   content: '';
   display: block;
   background: url("./slogan.svg") 100%/100%;
@@ -38,17 +44,17 @@
   height: 0.933333rem;
 }
 
-.page-home .bottom {
+.unlogin .page-home .bottom {
   position: absolute;
-  top: 74vh;
+  top: 74%;
   left: 0;
   width: 100%;
 }
 
-.page-home .button {
+.unlogin .page-home .button {
   width: 68%;
   height: 1.066667rem;
-  margin: 3vh auto 2vh;
+  margin: 3% auto 4%;
   display: block;
   background: #fff;
   border: none;
@@ -58,7 +64,7 @@
   font-weight: bold;
 }
 
-.page-home .desc {
+.unlogin .page-home .desc {
   font-size: 0.373333rem;
   color: #FFE7DC;
 }

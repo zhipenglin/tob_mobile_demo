@@ -12,7 +12,7 @@ if ('addEventListener' in document) {
     }, false);
 }
 
-document.documentElement.addEventListener('touchstart',(e)=>{
+document.documentElement.addEventListener('touchmove',(e)=>{
     e.preventDefault();
 },{passive:false});
 

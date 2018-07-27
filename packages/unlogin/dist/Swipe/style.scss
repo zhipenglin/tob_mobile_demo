@@ -1,17 +1,19 @@
-.swipe{
+.unlogin .swipe{
   overflow: hidden;
-  height: 100vh;
+  height: 100%;
   .swipe-inner{
     display: flex;
+    height: 100%;
   }
   .swipe-item{
     flex: 1;
     float: left;
     position: relative;
+    height: 100%;
   }
   .swipe-pointer{
     position: absolute;
-    top:88vh;
+    top:88%;
     left:50%;
     transform: translateX(-50%);
     line-height: 0;

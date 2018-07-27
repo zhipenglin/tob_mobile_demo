@@ -1,4 +1,4 @@
-.page-honor .title {
+.unlogin .page-honor .title {
   font-size: 0.613333rem;
   color: #333333;
   width: 100%;
@@ -7,35 +7,36 @@
   font-weight: bold;
 }
 
-.page-honor .honor-item {
+.unlogin .page-honor .honor-item {
   width: 100vw;
   overflow: hidden;
+  height: 100%;
 }
 
-.page-honor .honor-item .top {
+.unlogin .page-honor .honor-item .top {
   position: absolute;
   font-size: 0.373333rem;
   color: #333333;
   line-height: 0.613333rem;
-  top: 20vh;
+  top: 20%;
   width: 100%;
 }
 
-.page-honor .honor-item .img {
+.unlogin .page-honor .honor-item .img {
   width: 7.866667rem;
   height: 6.666667rem;
   overflow: hidden;
   border-radius: 0.106667rem;
   position: absolute;
-  top: 33vh;
+  top: 33%;
   left: 50%;
   transform: translateX(-50%);
 }
 
-.page-honor .honor-item .img img {
+.unlogin .page-honor .honor-item .img img {
   width: 100%;
 }
 
-.page-honor .swipe-pointer {
-  top: 81vh;
+.unlogin .page-honor .swipe-pointer {
+  top: 83%;
 }

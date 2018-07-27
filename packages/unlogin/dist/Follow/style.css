@@ -1,4 +1,4 @@
-.page-follow .title {
+.unlogin .page-follow .title {
   font-size: 0.613333rem;
   color: #333333;
   position: absolute;
@@ -8,7 +8,7 @@
   left: 0;
 }
 
-.page-follow .qr-code {
+.unlogin .page-follow .qr-code {
   position: absolute;
   top: 23vh;
   width: 7.333333rem;
@@ -16,7 +16,7 @@
   transform: translateX(-50%);
 }
 
-.page-follow .foot {
+.unlogin .page-follow .foot {
   font-size: 0.373333rem;
   color: #999999;
   top: 74vh;

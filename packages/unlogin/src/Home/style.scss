@@ -1,4 +1,4 @@
-.page-home{
+.unlogin .page-home{
   background: -webkit-linear-gradient(left top,#ff6e00,#ff3c00);
   .logo{
     position: absolute;
@@ -14,13 +14,17 @@
   }
   .animation{
     position: absolute;
-    top:10vh;
+    top:10%;
     left: 50%;
     transform: translateX(-50%);
+    $self:&;
+    @media screen and (max-width: 350px) {
+      top:0%;
+    }
   }
   .slogan{
     position: absolute;
-    top:62vh;
+    top:62%;
     left: 50%;
     transform: translateX(-50%);
     &:after{
@@ -33,14 +37,14 @@
   }
   .bottom{
     position: absolute;
-    top:74vh;
+    top:74%;
     left: 0;
     width: 100%;
   }
   .button{
     width: 68%;
     height: 80px;
-    margin: 3vh auto 2vh;
+    margin: 3% auto 4%;
     display: block;
     background: #fff;
     border: none;

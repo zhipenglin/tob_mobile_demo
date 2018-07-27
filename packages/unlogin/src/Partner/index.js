@@ -61,7 +61,7 @@ export default ()=>{
             <div className="title">合作企业</div>
             <Swipe>
                 {list.map((item,index)=><div className="item" key={index}>
-                    {item.map((logo,i)=><img className="logo" key={`${index}-${i}`} src={logo} alt="logo"/>)}
+                    {item.map((logo,i)=><div className="logo" key={`${index}-${i}`}><img src={logo} alt="logo"/></div>)}
                 </div>)}
             </Swipe>
         </div>

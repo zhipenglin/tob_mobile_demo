@@ -33,26 +33,24 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var _class = function (_PureComponent) {
     (0, _inherits3.default)(_class, _PureComponent);
 
-    function _class() {
-        var _ref;
-
-        var _temp, _this, _ret;
-
+    function _class(props) {
         (0, _classCallCheck3.default)(this, _class);
 
-        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-            args[_key] = arguments[_key];
-        }
+        var _this = (0, _possibleConstructorReturn3.default)(this, (_class.__proto__ || (0, _getPrototypeOf2.default)(_class)).call(this, props));
 
-        return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = _class.__proto__ || (0, _getPrototypeOf2.default)(_class)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+        _this.state = {
             moved: false,
             y: 0
-        }, _this.handlerStart = function (e) {
+        };
+
+        _this.handlerStart = function (e) {
             _this.startY = e.touches[0].clientY, _this.startX = e.touches[0].clientX;
             _this.prevY = 0;
             _this.deltaY = _this.deltaX = 0;
             _this.setState({ moved: true, y: 0 });
-        }, _this.handlerMove = function (e) {
+        };
+
+        _this.handlerMove = function (e) {
             var index = _this.props.index;
 
             _this.deltaY = _this.startY - e.touches[0].clientY, _this.deltaX = _this.startX - e.touches[0].clientX;
@@ -64,7 +62,9 @@ var _class = function (_PureComponent) {
             }
             _this.setState({ y: newY });
             _this.prevY = Math.abs(_this.deltaY);
-        }, _this.handlerEnd = function () {
+        };
+
+        _this.handlerEnd = function () {
             var _this$props = _this.props,
                 index = _this$props.index,
                 onChange = _this$props.onChange;
@@ -74,20 +74,23 @@ var _class = function (_PureComponent) {
             if (Math.abs(_this.deltaY) >= 50 && index + newY / _this.pageHeight >= 0 && index + newY / _this.pageHeight <= _this.pageSize - 1) {
                 onChange(Math.round(newY / _this.pageHeight) + index);
             }
-        }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+        };
+
+        _this.pageHeight = document.documentElement.clientHeight;
+        return _this;
     }
 
     (0, _createClass3.default)(_class, [{
         key: 'componentDidMount',
         value: function componentDidMount() {
-            this.height = this.el.clientHeight, this.pageHeight = document.documentElement.clientHeight;
-            this.pageSize = Math.round(this.height / this.pageHeight);
+            var children = this.props.children;
+
+            this.pageSize = _react2.default.Children.count(children);
+            this.height = this.pageHeight * this.pageSize;
         }
     }, {
         key: 'render',
         value: function render() {
-            var _this2 = this;
-
             var _props = this.props,
                 className = _props.className,
                 index = _props.index,
@@ -96,6 +99,9 @@ var _class = function (_PureComponent) {
             return _react2.default.createElement(
                 'div',
                 { className: className,
+                    style: {
+                        height: this.pageHeight + 'px'
+                    },
                     onTouchStart: this.handlerStart,
                     onTouchMove: this.handlerMove,
                     onTouchEnd: this.handlerEnd,
@@ -103,9 +109,7 @@ var _class = function (_PureComponent) {
                 },
                 _react2.default.createElement(
                     'div',
-                    { ref: function ref(el) {
-                            return _this2.el = el;
-                        }, className: 'page-inner', style: {
+                    { className: 'page-inner', style: {
                             transform: 'translateY(' + -(this.state.moved ? this.state.y + index * this.pageHeight : index * this.pageHeight) + 'px)',
                             transition: this.state.moved ? '' : 'transform 400ms'
                         } },

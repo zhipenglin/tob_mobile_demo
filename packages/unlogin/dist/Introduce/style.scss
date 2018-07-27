@@ -1,4 +1,14 @@
-.page-introduce{
+.unlogin .page-introduce{
+  @media screen and (max-width: 350px) {
+    .swipe{
+      transform: translateY(-20px);
+    }
+  }
+  @media screen and (max-height: 560px) {
+    .swipe-pointer{
+      transform: translate(-50%,10px);
+    }
+  }
   .top{
     text-align: left;
     position: absolute;
@@ -39,6 +49,12 @@
     position: absolute;
     left: 50%;
     top:34vh;
+    @media screen and (max-height: 560px) {
+      top: 30vh;
+    }
+    @media screen and (max-width: 350px) {
+      top: 24vh;
+    }
     transform: translateX(-50%);
   }
 }

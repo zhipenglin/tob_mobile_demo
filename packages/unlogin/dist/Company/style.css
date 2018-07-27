@@ -1,21 +1,30 @@
-.page-company .family {
+.unlogin .page-company .family {
   width: 100%;
 }
 
-.page-company .name {
+.unlogin .page-company .name {
   font-weight: bold;
-  margin-top: 0.666667rem;
+  position: absolute;
+  top: 32%;
+  left: 0.533333rem;
 }
 
-.page-company .about {
+.unlogin .page-company .about {
   font-size: 0.533333rem;
   text-align: left;
   padding: 0 0.533333rem;
   color: #333;
 }
 
-.page-company .section {
+.unlogin .page-company .des {
+  position: absolute;
+  left: 0.533333rem;
+  right: 0.533333rem;
+  top: 40%;
+}
+
+.unlogin .page-company .section {
   font-size: 0.373333rem;
-  padding-top: 0.533333rem;
+  padding-bottom: 0.4rem;
   line-height: 0.56rem;
 }

@@ -1,10 +1,12 @@
-.page-company {
+.unlogin .page-company {
   .family {
     width: 100%;
   }
   .name {
     font-weight: bold;
-    margin-top: 50px;
+    position: absolute;
+    top:32%;
+    left: 40px;
   }
   .about {
     font-size: 40px;
@@ -12,9 +14,15 @@
     padding: 0 40px;
     color: #333;
   }
+  .des{
+    position: absolute;
+    left: 40px;
+    right: 40px;
+    top:40%;
+  }
   .section {
     font-size: 28px;
-    padding-top: 40px;
+    padding-bottom: 30px;
     line-height: 42px;
   }
 }

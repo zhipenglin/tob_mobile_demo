@@ -16,7 +16,7 @@ export default class extends PureComponent{
             <Hype  className="animation" header={hypeHeader} name="bannerdonghua" running={running}/>
             <span className="slogan"/>
             <div className="bottom">
-                <button className="button" onClick={this.handlerClick}>申请使用</button>
+                <button className="button" onClick={this.handlerClick}>申请试用</button>
                 <div className="desc">e成用户请至PC端登录</div>
             </div>
         </div>

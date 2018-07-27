@@ -29,7 +29,7 @@ export default class extends PureComponent {
         const index = this.state.index;
         const {ApplyPage, hypeHeader} = this.props;
         return (
-            <Page className="screen" index={this.state.index} onChange={this.handlerChange}>
+            <Page className="unlogin screen" index={this.state.index} onChange={this.handlerChange}>
                 <Home hypeHeader={hypeHeader} running={index === 0} ApplyPage={ApplyPage}/>
                 <Introduce hypeHeader={hypeHeader} running={index === 1}/>
                 <Company/>

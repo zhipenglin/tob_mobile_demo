@@ -42,8 +42,19 @@ var _class = function (_PureComponent) {
     (0, _inherits3.default)(_class, _PureComponent);
 
     function _class() {
+        var _ref;
+
+        var _temp, _this, _ret;
+
         (0, _classCallCheck3.default)(this, _class);
-        return (0, _possibleConstructorReturn3.default)(this, (_class.__proto__ || (0, _getPrototypeOf2.default)(_class)).apply(this, arguments));
+
+        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+            args[_key] = arguments[_key];
+        }
+
+        return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = _class.__proto__ || (0, _getPrototypeOf2.default)(_class)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+            scale: 1
+        }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
     }
 
     (0, _createClass3.default)(_class, [{
@@ -59,9 +70,13 @@ var _class = function (_PureComponent) {
             scriptDom.type = "text/javascript";
             scriptDom.charSet = "utf-8";
             scriptDom.src = header + '/' + name + '/' + name + '.hyperesources/' + name + '_hype_generated_script.js';
-            this.el.append(scriptDom);
+            this.el.appendChild(scriptDom);
             var callback = function callback() {
                 if (window.HYPE && window.HYPE.documents[name].isPlayingTimelineNamed()) {
+                    var scale = document.documentElement.clientWidth / _this2.el.clientWidth;
+                    _this2.setState({
+                        scale: document.documentElement.clientHeight <= 553 ? scale * 0.8 : Math.min(1, scale)
+                    });
                     _this2.animateControl();
                 } else {
                     (0, _raf2.default)(callback);
@@ -97,9 +112,15 @@ var _class = function (_PureComponent) {
                 className = _props3.className,
                 name = _props3.name;
 
-            return _react2.default.createElement('div', { id: name + '_hype_container', className: (0, _classnames2.default)(className), ref: function ref(el) {
-                    return _this3.el = el;
-                } });
+            return _react2.default.createElement(
+                'div',
+                { className: (0, _classnames2.default)(className) },
+                _react2.default.createElement('div', { id: name + '_hype_container', style: {
+                        transform: 'scale(' + this.state.scale + ')'
+                    }, ref: function ref(el) {
+                        return _this3.el = el;
+                    } })
+            );
         }
     }]);
     return _class;
